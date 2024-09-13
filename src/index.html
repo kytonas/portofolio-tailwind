@@ -15,8 +15,12 @@
         .gradient {
             background-image: linear-gradient(to bottom right, #4c51bf, #702459);
         }
+
         .gradient-skill {
             background-image: linear-gradient(#fc8181, #fed7d7);
+        }
+        .gradient-bottom {
+            background-image: linear-gradient(#4c51bf, #702459);
         }
     </style>
 </head>
@@ -34,18 +38,19 @@
                 <a href="#recent" class="text-gray-600 hover:text-gray-900 text-lg">Recent Work</a>
                 <a href="#contact" class="text-gray-600 hover:text-gray-900 text-lg">Contact me</a>
             </div>
-            <!-- Hamburger button for mobile -->
+
             <div class="md:hidden">
                 <button @click="open = !open" class="text-gray-600 hover:text-gray-900 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16">
                         </path>
                     </svg>
                 </button>
             </div>
         </nav>
-        <!-- Menu Mobile -->
+    
         <div x-show="open" class="md:hidden space-y-4 bg-gray-100 p-4">
             <a href="#about" class="block text-gray-600 hover:text-gray-900 text-lg">About me</a>
             <a href="#skill" class="block text-gray-600 hover:text-gray-900 text-lg">Skill Framework</a>
@@ -140,7 +145,8 @@
                     <div class="mb-4 text-center">
                         <div class="h-1 mx-auto bg-pink-500 w-2/2 opacity-75 rounded my-0 mx-0"></div>
                     </div>
-                    <p class="mt-4 text-lg text-gray-600">Berikut adalah item dan skala keahlian untuk framework yang saya gunakan : </p>
+                    <p class="mt-4 text-lg text-gray-600">Berikut adalah item dan skala keahlian untuk framework yang
+                        saya gunakan : </p>
                     <ul class="list-none mt-4">
                         <li class="grid grid-cols-2 py-2">
                             <p class="text-lg text-gray-600">Laravel</p>
@@ -167,9 +173,106 @@
             </div>
         </div>
     </section>
-    <section class="w-screen mx-auto py-4 bg-gray-300 h-32">Recent Work</section>
-    <section class="w-screen mx-auto py-4 bg-indigo-700 h-32">Contact me</section>
-    <section class="w-screen mx-auto py-4 bg-white h-32">Footer</section>
+    <section class="py-8 bg-white container mx-auto px-8">
+        <div class="text-center mb-8">
+            <h1 class="w-full my-2 text-5xl font-bold text-gray-700">My Recent Work</h1>
+            <div class="mb-4">
+                <div class="h-1 mx-auto bg-pink-500  w-1/4 opacity-75 my-0 py-0 rounded">
+                </div>
+            </div>
+            <p class="text-lg m-4 text-gray-600">Berikut adalah pekerjaan terbaru Saya : </p>
+        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 bg-white m-16 rounded-lg">
+                <div class="max-w-sm shadow-lg px-4 py-4 bg-white  m-3 rounded-lg h-48"> 
+                    <img src="/img/orang-ngobrol.jpg" class="w-full rounded-lg">
+                    <div class="px-2 py-2 text-center">
+                        <p class="font-bold text-xl mb-2 text-gray-700">Aplikasi Blog sederhana</p>
+                        <p class="text-gray-700 text-base">Aplikasi blog sederhana yang dibuat oleh framework laravel 
+                        </p>
+                    </div>
+                    <div class="px-2 py-4 text-center">
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tr-lg rounded-bl-lg">Detail</button>
+                    </div>
+                </div>
+                <div class="max-w-sm shadow-lg px-4 py-4 bg-white  m-3 rounded-lg h-48">
+                    <img src="/img/pilketos-1.jpg" class="w-full rounded-lg">
+                    <div class="px-2 py-2 text-center">
+                        <p class="font-bold text-xl mb-2 text-gray-700">Aplikasi E-Pilketos</p>
+                        <p class="text-gray-700 text-base">Aplikasi pilketos yang dibuat oleh framework laravel
+                        </p>
+                    </div>
+                    <div class="px-2 py-4 text-center">
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tr-lg rounded-bl-lg">Detail</button>
+                    </div>
+                </div>
+                <div class="max-w-sm shadow-lg px-4 py-4 bg-white  m-3 rounded-lg h-48">
+                    <img src="/img/sakola.jpg" class="w-full rounded-lg">
+                    <div class="px-2 py-2 text-center">
+                        <p class="font-bold text-xl mb-2 text-gray-700">Web Profil Sekolah Sederhana</p>
+                        <p class="text-gray-700 text-base">Website profil sekolah SMK Assalaam Bandung sederhana yang dibuat oleh framework laravel
+                        </p>
+                    </div>
+                    <div class="px-2 py-4 text-center">
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tr-lg rounded-bl-lg">Detail</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="w-screen mx-auto py-4 gradient-bottom">
+        <h1 class="w-full my-2 text-5xl font-bold text-center text-white">Contact me</h1>
+        <div class="mb-4">
+            <div class="h-1 mx-auto bg-pink-500 w-1/4 opacity-75 my-0 py-0 rounded"></div>
+        </div>
+        <div class="p-4 mb-6 shadow-lg rounded-lg bg-gray-200 bg-white mx-auto max-w-md">
+            <form class="p-5 lg:p-10">
+                <h4 class="text-2xl font-semibold ">Ingin menghubungi saya ?</h4>
+                <p class="mt-1 mb-4 text-gray-600">Tolong kirimkan pesan</p>
+                <div class="w-full mb-4 mt-8">
+                    <label for="nama" class="uppercase text-gray-600 text-xs font-bold">Nama lengkap</label>
+                    <input type="text"
+                        class="mt-2 px-3 py-4 placeholder-gray-400 w-full text-gray-600 bg-white rounded text-sm shadow-lg"
+                        id="nama" placeholder="Masukkan Nama lengkap">
+                </div>
+                <div class="w-full mb-4 mt-8">
+                    <label for="email" class="uppercase text-gray-600 text-xs font-bold">E-Mail</label>
+                    <input type="email"
+                        class="mt-2 px-3 py-4 placeholder-gray-400 w-full text-gray-600 bg-white rounded text-sm shadow-lg"
+                        id="email" placeholder="Masukkan E-Mail">
+                </div>
+                <div class="w-full mb-4 mt-8">
+                    <label for="nama" class="uppercase text-gray-600 text-xs font-bold">Pesan</label>
+                    <textarea name="pesan" id="" cols="80" rows="4" 
+                    class="mt-2 px-3 py-4 placeholder-gray-400 w-full text-gray-600 bg-white rounded text-sm shadow-lg" placeholder="Tuliskan pesan...">
+                    </textarea>
+                </div>
+                <div class="mt-6">
+                    <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded-tl-lg rounded-br-lg">
+                        Kirim Pesan
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="w-screen mx-auto py-4 bg-white">
+        <div class="text-center">
+            <!-- link & icon -->
+            <a href="#" class="text-indigo-700 hover:text-indigo-900 p-2 ">
+                <i class="fa-2x fab fa-facebook"></i>
+            </a>
+            <a href="#" class="text-indigo-700 hover:text-indigo-900 p-2 ">
+                <i class="fa-2x fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="text-indigo-700 hover:text-indigo-900 p-2 ">
+                <i class="fa-2x fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="text-center mt-4 text-gray-600">
+            Design with Tailwind CSS by Ksatria F. Nasywaan
+        </div>
+    </section>
 </body>
 
 </html>
